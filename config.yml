@@ -1,0 +1,263 @@
+---
+
+# I have included every variable that gets picked up along the way.
+# Some I've commented out, if I would rather just trust the upstream maintainers with their defaults.
+# Others I've asserted, even if I've chosen the same as whatever variable is currently in the defaults.
+
+###############################################################################
+# OSX Command Line Tools                                                      #
+###############################################################################
+
+# force_install: no # default is no, anyway
+
+
+###############################################################################
+# Homebrew                                                                    #
+###############################################################################
+
+# homebrew_repo: https://github.com/Homebrew/brew
+# homebrew_prefix: "{{ (ansible_machine == 'arm64') | ternary('/opt/homebrew', '/usr/local') }}"
+# homebrew_install_path: "{{ homebrew_prefix }}{{ '/Homebrew' if ansible_machine != 'arm64' }}"
+# homebrew_brew_bin_path: "{{ homebrew_prefix }}/bin"
+
+homebrew_installed_packages:
+  - git-gui
+  - mas # essential for this playbook to work
+  - python
+  - tree # nice little cli tool to show depth-indented listing of files
+
+homebrew_uninstalled_packages: []
+
+homebrew_upgrade_all_packages: false
+
+homebrew_taps: []
+
+homebrew_cask_apps:
+  - alt-tab
+  - anki
+  - backblaze # would like to replace this with a NAS, but i suppose it's good to have an off-site backup
+  - bitwarden
+  - chatgpt
+  - deepl
+  - discord
+  - font-fira-code
+  - firefox
+  - google-chrome
+  - google-drive
+  - grandperspective
+  - granola
+  - iterm2
+  - logitech-camera-settings # so i can turn off autofocus
+  - loom
+  - macdown
+  - malwarebytes
+  - microsoft-excel
+  - microsoft-outlook
+  - microsoft-powerpoint
+  - microsoft-teams
+  - microsoft-word
+  - nordvpn
+  - onedrive
+  - raycast
+  - rectangle # could use Raycast instead, maybe?
+  - signal
+  - spotify
+  - steam
+  - sublime-text
+  - superhuman
+  - teamviewer
+  - the-unarchiver
+  - todoist
+  - transmission
+  - vlc
+  - whatsapp
+  - zoom
+# Quick Look plugins below this line
+# See https://github.com/sindresorhus/quick-look-plugins for more
+  - qlcolorcode
+  - qlstephen
+  - qlmarkdown
+  - quicklook-json
+  - quicklook-csv
+  - qlimagesize
+  - suspicious-package
+  - webpquicklook
+
+# List of apps which I have chosen NOT to install.. I might change my mind in future.
+# bartender # cleans up the osx toolbar, but costs money and seems slightly buggy
+# cleanshot # nice screenshot editor
+# dash # offline docsets, but costs $15/yr. Might be good to add the Raycast extension too.
+# dropbox
+# raindropio # haven't found myself reaching for it
+# mkvtoolnix # useful for adding subs, editing sub delay, etc.
+# musicbrainz-picard # also see beets (pip install beets)
+# mp3tag # also see beets (pip install beets)
+# slack
+# superwhisper # transcription at your fingertips, but haven't found myself reaching for it
+# warp
+
+homebrew_cask_uninstalled_apps: []
+
+homebrew_cask_appdir: /Applications
+
+# homebrew_cask_accept_external_apps: false # Not sure what this does
+
+homebrew_use_brewfile: false # default is true
+# homebrew_brewfile_dir: '~'
+
+# homebrew_clear_cache: false # default is false
+
+# homebrew_folders_additional: [] # default is []
+
+
+
+###############################################################################
+# Dotfiles                                                                    #
+###############################################################################
+
+configure_dotfiles: true
+dotfiles_repo: "https://github.com/mjfdevere5/dotfiles.git"  # https, to avoid hostkey stuff that I don't understand.
+# dotfiles_repo_accept_hostkey: true # something to do with SSH, I believe.
+dotfiles_repo_local_destination: "~/Coding/dotfiles-repo"
+dotfiles_repo_version: main # I use main, not master
+dotfiles_home: "~"
+dotfiles_files:
+  - .gitignore
+  - .gitconfig
+  - .osx
+  - .zprofile
+  - .zshrc
+
+
+###############################################################################
+# mas                                                                         #
+###############################################################################
+
+mas_email: ""
+mas_password: ""
+mas_uninstalled_apps: []
+mas_installed_apps:
+  - { id: 457622435, name: "Yoink" }
+# mas_upgrade_all_apps: false
+# mas_signin_dialog: false
+# mas_path: "{{ '/opt/homebrew/bin/mas' if ansible_architecture == 'arm64' else '/usr/local/bin/mas' }}"
+
+
+###############################################################################
+# Dockutil                                                                    #
+###############################################################################
+
+configure_dock: false
+
+# dockitems_remove:
+#   - Launchpad
+#   - TV
+#   - Podcasts
+#   - 'App Store'
+
+# dockitems_persist:
+#   - name: "Raycast"
+#     path: "/Applications/Raycast.app/"
+#     pos: 2
+
+dockutil_install: false # default is true
+
+
+###############################################################################
+# Sudoers                                                                     #
+###############################################################################
+
+configure_sudoers: false
+sudoers_custom_config: ""
+# Example:
+# sudoers_custom_config: |
+#   # Allow users in admin group to use sudo with no password.
+#   %admin ALL=(ALL) NOPASSWD: ALL
+
+
+###############################################################################
+# Terminal app                                                                #
+###############################################################################
+
+configure_terminal: false
+
+
+###############################################################################
+# OSX                                                                         #
+###############################################################################
+
+configure_osx: true
+osx_script: "{{ dotfiles_repo_local_destination }}/scripts/osx-defaults.sh --no-restart"
+
+
+###############################################################################
+# Extra packages                                                              #
+###############################################################################
+
+# Install packages from other package managers.
+# Note: You are responsible for making sure the required package managers are
+# installed, eg. through homebrew.
+composer_packages: []
+# - name: drush
+#   state: present # present/absent, default: present
+#   version: "^8.1" # default: N/A
+gem_packages: []
+# - name: bundler
+#   state: present # present/absent/latest, default: present
+#   version: "~> 1.15.1" # default: N/A
+npm_packages: []
+# - name: webpack
+#   state: present # present/absent/latest, default: present
+#   version: "^2.6" # default: N/A
+pip_packages: []
+# - name: mkdocs
+#   state: present # present/absent/latest, default: present
+#   version: "0.16.3" # default: N/A
+
+
+###############################################################################
+# Sublime Text                                                                #
+###############################################################################
+
+configure_sublime: true
+sublime_base_path: "~/Library/Application Support/Sublime Text"
+sublime_config_path: "Packages/User"
+sublime_package_control:
+# Core essentials
+  - "Package Control"
+  - "SideBarEnhancements"
+  - "SublimeLinter"
+  - "SublimeREPL"
+# General quality of life
+  - "TrailingSpaces"
+  - "BracketHighlighter" # not sure if working
+  - "WordingStatus"
+# Git, Github
+  - "GitGutter" # not sure if this is working?
+  - "GitSavvy" # not sure I'd ever use this
+  - "GitHub Flavored Markdown Preview" # default binding is ctrl+shift+g
+# Ansible and YAML
+  - "AnsibleSnippets"
+  - "SublimeLinter-contrib-yamllint"
+# Python and Jinja
+  - "Anaconda"
+  - "Jinja2"
+# HTML, CSS, JavaScript, React, Redux, JSON
+  - "Babel"
+  - "Emmet"
+  - "HTML-CSS-JS Prettify"
+  - "JavaScript Snippets"
+  - "Pretty JSON"
+  - "React ES6 Snippets"
+# Clojure
+  - "Clojure Sublimed"
+# Themes
+  - "Theme - Cobalt2"
+
+
+###############################################################################
+# Post-provision                                                              #
+###############################################################################
+
+post_provision_tasks: []
+
