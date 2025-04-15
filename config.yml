@@ -79,7 +79,6 @@ homebrew_cask_apps:
   - qlmarkdown
   - quicklook-json
   - quicklook-csv
-  - qlimagesize
   - suspicious-package
   - webpquicklook
 
@@ -116,15 +115,14 @@ homebrew_use_brewfile: false # default is true
 ###############################################################################
 
 configure_dotfiles: true
-dotfiles_repo: "https://github.com/mjfdevere5/dotfiles.git"  # https, to avoid hostkey stuff that I don't understand.
-# dotfiles_repo_accept_hostkey: true # something to do with SSH, I believe.
+dotfiles_repo: "git@github.com:mjfdevere5/dotfiles.git"
+dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: "~/Coding/dotfiles-repo"
 dotfiles_repo_version: main # I use main, not master
 dotfiles_home: "~"
 dotfiles_files:
   - .gitignore
   - .gitconfig
-  - .osx
   - .zprofile
   - .zshrc
 
