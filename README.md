@@ -21,21 +21,22 @@ _I recommend watching some of  Jeff's ["Ansible 101" series](https://www.youtube
 1. Sign into App Store (since `mas` can't sign in automatically).
 
 1. Install Command Line Tools, update PATH, install Ansible.
-	```sh
-	xcode-select --install
-	export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:$PATH"
-	pip3 install ansible
-	```
+
+	`xcode-select --install`
+	
+	`export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:$PATH"`
+	
+	`pip3 install ansible`
 
 1. Set up SSH key for GitHub:
-	```sh
-	ssh-keygen -t ed25519 -C "8040671+mjfdevere5@users.noreply.github.com"
-	pbcopy < ~/.ssh/id_ed25519.pub
-	```
+
+	`ssh-keygen -t ed25519 -C "8040671+mjfdevere5@users.noreply.github.com"`
+
+	`pbcopy < ~/.ssh/id_ed25519.pub`
+
 	Paste this into [GitHub key settings](https://github.com/settings/keys), and test connection with:
-	```sh
-	ssh -T git@github.com
-	```
+	
+	`ssh -T git@github.com`
 
 1. Clone this repo, e.g.:
 	```sh
