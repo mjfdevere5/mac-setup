@@ -117,7 +117,7 @@ homebrew_use_brewfile: false # default is true
 configure_dotfiles: true
 dotfiles_repo: "git@github.com:mjfdevere5/dotfiles.git"
 dotfiles_repo_accept_hostkey: true
-dotfiles_repo_local_destination: "~/Coding/dotfiles-repo"
+dotfiles_repo_local_destination: "~/Coding/dotfiles"
 dotfiles_repo_version: main # I use main, not master
 dotfiles_home: "~"
 dotfiles_files:
@@ -238,7 +238,6 @@ sublime_package_control:
   - "AnsibleSnippets"
   - "SublimeLinter-contrib-yamllint"
 # Python and Jinja
-  - "Anaconda"
   - "Jinja2"
 # HTML, CSS, JavaScript, React, Redux, JSON
   - "Babel"
