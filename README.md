@@ -40,6 +40,8 @@ _I recommend watching some of  Jeff's ["Ansible 101" series](https://www.youtube
 	ssh-keygen -t ed25519 -C "8040671+mjfdevere5@users.noreply.github.com"
 	```
 
+	(Just hit enter through the options.)
+
 	```sh
 	pbcopy < ~/.ssh/id_ed25519.pub
 	```
