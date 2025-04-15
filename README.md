@@ -22,28 +22,42 @@ _I recommend watching some of  Jeff's ["Ansible 101" series](https://www.youtube
 
 1. Install Command Line Tools, update PATH, install Ansible.
 
-	`xcode-select --install`
+	```sh
+	xcode-select --install
+	```
 	
-	`export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:$PATH"`
+	```sh
+	export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:$PATH"
+	```
 	
-	`pip3 install ansible`
+	```sh
+	pip3 install ansible
+	```
 
 1. Set up SSH key for GitHub:
 
-	`ssh-keygen -t ed25519 -C "8040671+mjfdevere5@users.noreply.github.com"`
+	```sh
+	ssh-keygen -t ed25519 -C "8040671+mjfdevere5@users.noreply.github.com"
+	```
 
-	`pbcopy < ~/.ssh/id_ed25519.pub`
+	```sh
+	pbcopy < ~/.ssh/id_ed25519.pub
+	```
 
 	Paste this into [GitHub key settings](https://github.com/settings/keys), and test connection with:
 	
-	`ssh -T git@github.com`
+	```sh
+	ssh -T git@github.com
+	```
 
 1. Clone this repo, e.g.:
+
 	```sh
 	mkdir -p ~/Coding && git clone git@github.com:mjfdevere5/mac-setup.git ~/Coding/mac-setup
 	```
 
 1. Install requirements:
+
 	```sh
 	cd ~/Coding/mac-setup && ansible-galaxy install -r requirements.yml
 	```
@@ -51,6 +65,7 @@ _I recommend watching some of  Jeff's ["Ansible 101" series](https://www.youtube
 1. Configure the playbook, by editing `config.yml`  to suit your needs. This will override the variables in `default.config.yml`. (I try not to touch the defaults, for ease of tracking the upstream repo.)
 
 1. Run the playbook, entering macOS password (must be admin) when prompted:
+
 	```sh
 	ansible-playbook main.yml --ask-become-pass
 	```
@@ -91,6 +106,7 @@ _I recommend watching some of  Jeff's ["Ansible 101" series](https://www.youtube
 ## Thereafter, keep macs in sync
 
 Periodically, pull any changes and run the playbook:
+
 ```sh
 ansible-playbook main.yml --ask-become-pass
 ```
