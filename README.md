@@ -14,62 +14,65 @@ _I recommend watching some of  Jeff's ["Ansible 101" series](https://www.youtube
 
 1. Avoid opening too many Finder windows before you have set Finder defaults that you are happy with, because the windows you have already opened will retain their config. (My `.osx-defaults.sh` script, which is invoked by this playbook, sets most of my preferred defaults.)
 
-1. Sign into Internet Accounts
+1. Sign into Internet Accounts:
 	- iCloud for everything except for Mail, Contacts, Calendar.
 	- Personal Gmail for Contacts
 
-1. Sign into App Store (since `mas` can't sign in automatically)
+1. Sign into App Store (since `mas` can't sign in automatically).
 
-1. Install Command Line Tools, update PATH, install Ansible
-
+1. Install Command Line Tools, update PATH, install Ansible.
 	```sh
 	xcode-select --install
-	
 	export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:$PATH"
-	
 	pip3 install ansible
 	```
 
-1. Clone this repo, e.g.:
-
+1. Set up SSH key for GitHub:
 	```sh
-	mkdir -p ~/Coding && git clone https://github.com/mjfdevere5/mac-setup.git ~/Coding/mac-setup
+	ssh-keygen -t ed25519 -C "8040671+mjfdevere5@users.noreply.github.com"
+	pbcopy < ~/.ssh/id_ed25519.pub
+	```
+	Paste this into [GitHub key settings](https://github.com/settings/keys), and test connection with:
+	```sh
+	ssh -T git@github.com
+	```
+
+1. Clone this repo, e.g.:
+	```sh
+	mkdir -p ~/Coding && git clone git@github.com:mjfdevere5/mac-setup.git ~/Coding/mac-setup
 	```
 
 1. Install requirements:
-	
 	```sh
 	cd ~/Coding/mac-setup && ansible-galaxy install -r requirements.yml
 	```
 
-1. Configure the playbook
-	- Edit the `config.yml` file to suit your needs. This will override the variables in `default.config.yml`. (I try not to touch the defaults, for ease of tracking the upstream repo.)
+1. Configure the playbook, by editing `config.yml`  to suit your needs. This will override the variables in `default.config.yml`. (I try not to touch the defaults, for ease of tracking the upstream repo.)
 
 1. Run the playbook, entering macOS password (must be admin) when prompted:
-	
 	```sh
 	ansible-playbook main.yml --ask-become-pass
 	```
-	
-	This playbook will
-	- Load `default.config.yml`, and `config.yml` if it exists
+
+	This playbook will:
+	- Load `default.config.yml`, and `config.yml` if it exists.
 	- Ensure the OSX command line tools are installed.
 	- Ensure Homebrew is installed, and uses it to install packages/casks.
 	- Ensure dotfiles are installed.
 	- Ensure mas is installed, and uses it to install App Store apps.
 	- Ensure dockutil is installed, and uses it to configure the dock.
-	- Configure sudoers (I have this switched off.)
-	- Configure the Terminal app (I have this switched off.)
+	- Configure sudoers (I have this switched off).
+	- Configure the Terminal app (I have this switched off).
 	- Configure OSX settings and defaults via a script.
 	- Ensure extra packages are installed, e.g. Composer, NPM, Pip, Ruby gems.
 	- Configure Sublime Text.
 	- Runs post-provision task files (nothing by default).
 
-	> Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run brew doctor to see if this is the case.
+	> Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
 
 1. Start Synchronization tasks:
-	- Open Photos and make sure iCloud sync options are correct
-	- Ensure iCloud is syncing Documents and Desktop
+	- Open Photos and make sure iCloud sync options are correct.
+	- Ensure iCloud is syncing Documents and Desktop.
 
 1. 🚧 TODO: Transfer a copy of all non-Documents non-Desktop files into the `$HOME` folder.
 	- Archives [SHOULD LIVE ON A NAS]
@@ -87,7 +90,6 @@ _I recommend watching some of  Jeff's ["Ansible 101" series](https://www.youtube
 ## Thereafter, keep macs in sync
 
 Periodically, pull any changes and run the playbook:
-
 ```sh
 ansible-playbook main.yml --ask-become-pass
 ```
