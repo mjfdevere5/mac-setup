@@ -105,7 +105,7 @@ _I recommend watching some of  Jeff's ["Ansible 101" series](https://www.youtube
 	- Raycast: Grant Accessibility, sign in, enable Cloud Sync, set the keyboard shortcut.
 	- Rectangle: Grant Accessibility, use Spectacle settings, add shortcuts for thirds/sixths.
 	- AltTab: Grant Accessibility, fix Appearance, fix Controls, turn off Menubar icon.
-	- iTerm: Default Profile --> Window --> Transparency 15, and Style 'Full-Width Top of Screen'; Terminal --> Scrollback lines '20,000'.
+	- iTerm: Default Profile --> Window --> Transparency 15, Style 'Full-Width Top of Screen', Space 'All Spaces'; Terminal --> Scrollback lines '20,000'.
 	- Google Drive: Add my three accounts, Streaming mode, uncheck 'Prompt me to back up devices'. Create some convenience symlinks back into ~.
 	- Backblaze: Find the installer, install, grant Accessibility, go Settings --> 'Inherit Backup State' from the previous Mac.
 	- For everything else, just open the app, sign in, grant Accessibility as needed.
