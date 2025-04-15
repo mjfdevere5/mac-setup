@@ -47,7 +47,7 @@ homebrew_cask_apps:
   - grandperspective
   - granola
   - iterm2
-  - logitech-camera-settings # so i can turn off autofocus
+  - logitech-camera-settings # so i can turn off autofocus. Note that this requires Rosetta (sudo softwareupdate --install-rosetta)
   - loom
   - macdown
   - malwarebytes
@@ -145,20 +145,41 @@ mas_installed_apps:
 # Dockutil                                                                    #
 ###############################################################################
 
-configure_dock: false
+configure_dock: true
 
-# dockitems_remove:
-#   - Launchpad
-#   - TV
-#   - Podcasts
-#   - 'App Store'
+dockitems_remove:
+  - Downloads
+  - TeamViewer
+  - NordVPN
+  - Terminal
+  - 'iPhone Mirroring'
+  - System Settings
+  - 'App Store'
+  - Pages
+  - Numbers
+  - Keynote
+  - News
+  - Music
+  - TV
+  - Freeform
+  - Notes
+  - Reminders
+  - Contacts
+  - Calendar
+  - FaceTime
+  - Photos
+  - Maps
+  - Mail
+  - Messages
+  - Safari
+  - Launchpad
 
-# dockitems_persist:
-#   - name: "Raycast"
-#     path: "/Applications/Raycast.app/"
-#     pos: 2
+dockitems_persist:
+  - name: "Raycast"
+    path: "/Applications/Raycast.app/"
+    pos: 2
 
-dockutil_install: false # default is true
+dockutil_install: true
 
 
 ###############################################################################
