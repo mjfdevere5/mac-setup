@@ -16,11 +16,12 @@ _I recommend watching some of  Jeff's ["Ansible 101" series](https://www.youtube
 
 1. Sign into Internet Accounts:
 	- iCloud for everything except for Mail, Contacts, Calendar.
+	- Enable iCloud Drive and sync Desktop/Documents.
 	- Personal Gmail for Contacts
 
 1. Sign into App Store (since `mas` can't sign in automatically).
 
-1. Install Command Line Tools, update PATH, install Ansible.
+1. Install Command Line Tools, update PATH, install Ansible, and install Rosetta (if any of your apps require it).
 
 	```sh
 	xcode-select --install
@@ -32,6 +33,10 @@ _I recommend watching some of  Jeff's ["Ansible 101" series](https://www.youtube
 	
 	```sh
 	pip3 install ansible
+	```
+
+	```sh
+	sudo softwareupdate --install-rosetta
 	```
 
 1. Set up SSH key for GitHub:
@@ -92,18 +97,24 @@ _I recommend watching some of  Jeff's ["Ansible 101" series](https://www.youtube
 	- Open Photos and make sure iCloud sync options are correct.
 	- Ensure iCloud is syncing Documents and Desktop.
 
+1. Manual config:
+	- System Settings --> Keyboard: Remove the shortcuts for Spotlight, set Globe key to do nothing.
+	- Bitwarden: Enable TouchID, enable browser integration.
+	- Google Chrome: Sign in to sync, and get Bitwarden extension working, enable TouchID.
+	- Firefox: Sign in to sync, and get Bitwarden extension working, enable TouchID.
+	- Raycast: Grant Accessibility, sign in, enable Cloud Sync, set the keyboard shortcut.
+	- Rectangle: Grant Accessibility, use Spectacle settings, add shortcuts for thirds/sixths.
+	- AltTab: Grant Accessibility, fix Appearance, fix Controls, turn off Menubar icon.
+	- Google Drive: Add my three accounts, Streaming mode, uncheck 'Prompt me to back up devices'. Create some convenience symlinks back into ~.
+	- Backblaze: Find the installer, install, grant Accessibility, go Settings --> 'Inherit Backup State' from the previous Mac.
+	- For everything else, just open the app, sign in, grant Accessibility as needed.
+
 1. 🚧 TODO: Transfer a copy of all non-Documents non-Desktop files into the `$HOME` folder.
 	- Archives [SHOULD LIVE ON A NAS]
 	- Coding [CAN ALSO BE CLONED IN, BUT MANUAL TRANSFER IS QUICKER]
 	- Downloads [CONFIGURE TO SYNC WITH NAS]
 	- Movies (ignoring Apple's "TV" folder) [SHOULD LIVE ON A NAS]
 	- Music (ignoring Apple's "Music" folder) [SHOULD LIVE ON A NAS]
-
-1. 🚧 TODO: For apps which need to have their settings configured manually, do so. For me, these are:
-	- App1
-	- App2
-	- App3
-	- ...
 
 ## Thereafter, keep macs in sync
 
