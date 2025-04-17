@@ -38,6 +38,7 @@ homebrew_cask_apps:
   - anki
   - backblaze # would like to replace this with a NAS, but i suppose it's good to have an off-site backup
   - chatgpt
+  - claude
   - deepl
   - discord
   - font-fira-code
@@ -50,7 +51,7 @@ homebrew_cask_apps:
   - logitech-camera-settings # so i can turn off autofocus. Note that this requires Rosetta (sudo softwareupdate --install-rosetta)
   - loom
   - macdown
-  - malwarebytes
+  # - malwarebytes
   - microsoft-excel
   - microsoft-outlook
   - microsoft-powerpoint
@@ -65,6 +66,7 @@ homebrew_cask_apps:
   - steam
   - sublime-text
   - superhuman
+  - superwhisper
   - teamviewer
   - the-unarchiver
   - todoist
