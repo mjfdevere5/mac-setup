@@ -39,6 +39,7 @@ homebrew_cask_apps:
   - backblaze # would like to replace this with a NAS, but i suppose it's good to have an off-site backup
   - chatgpt
   - claude
+  - cursor
   - deepl
   - discord
   - font-fira-code
