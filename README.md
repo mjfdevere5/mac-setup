@@ -10,7 +10,7 @@ _I recommend watching some of  Jeff's ["Ansible 101" series](https://www.youtube
 
 ## Installation and new Mac setup
 
-1. Run through Apple's mandtory setup wizard.
+1. Run through Apple's mandatory setup wizard.
 
 1. Avoid opening too many Finder windows before you have set Finder defaults that you are happy with, because the windows you have already opened will retain their config. (My `.osx-defaults.sh` script, which is invoked by this playbook, sets most of my preferred defaults.)
 
@@ -99,6 +99,7 @@ _I recommend watching some of  Jeff's ["Ansible 101" series](https://www.youtube
 
 1. Manual config:
 	- System Settings --> Keyboard: Remove the shortcuts for Spotlight, set Globe key to do nothing. Might also need to go to --> Sound to disable some of this stuff, if the `osx-defaults.sh` script hasn't fully worked.
+	- Install [Aqua Voice](https://withaqua.com/) and log in with gmail (personal).
 	- Bitwarden: Enable TouchID, enable browser integration.
 	- Google Chrome: Sign in to sync, and get Bitwarden extension working, enable TouchID.
 	- Firefox: Sign in to sync, and get Bitwarden extension working, enable TouchID.

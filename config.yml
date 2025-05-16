@@ -23,6 +23,7 @@
 homebrew_installed_packages:
   - defaultbrowser
   - git-gui
+  - jupyterlab
   - mas # essential for this playbook to work
   - python
   - tree # nice little cli tool to show depth-indented listing of files
