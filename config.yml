@@ -62,6 +62,7 @@ homebrew_cask_apps:
   - microsoft-word
   - miniforge
   - nordvpn
+  - notion
   - onedrive
   - raycast
   - rectangle # could use Raycast instead, maybe?
