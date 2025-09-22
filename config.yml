@@ -43,6 +43,7 @@ homebrew_cask_apps:
   - cursor
   - deepl
   - discord
+  - fantastical
   - figma
   - firefox
   - font-fira-code
