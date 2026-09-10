@@ -99,13 +99,11 @@ _I recommend watching some of  Jeff's ["Ansible 101" series](https://www.youtube
 
 1. Manual config:
 	- System Settings --> Keyboard: Remove the shortcuts for Spotlight, set Globe key to do nothing. Might also need to go to --> Sound to disable some of this stuff, if the `osx-defaults.sh` script hasn't fully worked.
-	- Install [Aqua Voice](https://withaqua.com/) and log in with gmail (personal).
 	- Bitwarden: Enable TouchID, enable browser integration.
 	- Google Chrome: Sign in to sync, and get Bitwarden extension working, enable TouchID.
 	- Firefox: Sign in to sync, and get Bitwarden extension working, enable TouchID.
 	- Raycast: Grant Accessibility, sign in, enable Cloud Sync, set the keyboard shortcut.
 	- Rectangle: Grant Accessibility, use Spectacle settings, add shortcuts for thirds/sixths.
-	- AltTab: Grant Accessibility, fix Appearance, fix Controls, turn off Menubar icon.
 	- iTerm: Default Profile --> Window --> Transparency 15, Style 'Full-Width Top of Screen', Space 'All Spaces'; Terminal --> Scrollback lines '20,000'.
 	- Google Drive: Add my three accounts, Streaming mode, uncheck 'Prompt me to back up devices'. Create some convenience symlinks back into ~.
 	- Backblaze: Find the installer, install, grant Accessibility, go Settings --> 'Inherit Backup State' from the previous Mac.

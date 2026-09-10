@@ -25,8 +25,9 @@ homebrew_installed_packages:
   - git-gui
   - graphviz
   - mas # essential for this playbook to work
-  - python
+  # - python # maybe just install this into the relevant virtual env ?
   - tree # nice little cli tool to show depth-indented listing of files
+  - yt-dlp # needed for Raycast's youtube transcript extension to work
 
 homebrew_uninstalled_packages: []
 
@@ -61,7 +62,6 @@ homebrew_cask_apps:
   - microsoft-powerpoint
   - microsoft-teams
   - microsoft-word
-  - miniforge
   - nordvpn
   - notion
   - onedrive
@@ -72,13 +72,14 @@ homebrew_cask_apps:
   - steam
   - sublime-text
   - superhuman
-  - superwhisper
+  # - superwhisper
   - teamviewer
   - the-unarchiver
   - todoist
   - transmission
   - vlc
   - whatsapp
+  - wispr-flow
   - zoom
 # Quick Look plugins below this line
 # See https://github.com/sindresorhus/quick-look-plugins for more
