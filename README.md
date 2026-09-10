@@ -98,15 +98,15 @@ _I recommend watching some of  Jeff's ["Ansible 101" series](https://www.youtube
 	- Ensure iCloud is syncing Documents and Desktop.
 
 1. Manual config:
-	- System Settings --> Keyboard: Remove the shortcuts for Spotlight, set Globe key to do nothing. Might also need to go to --> Sound to disable some of this stuff, if the `osx-defaults.sh` script hasn't fully worked.
+	- System Settings → Keyboard: Remove the shortcuts for Spotlight, set Globe key to do nothing. Might also need to go to → Sound to disable some of this stuff, if the `osx-defaults.sh` script hasn't fully worked.
 	- Bitwarden: Enable TouchID, enable browser integration.
 	- Google Chrome: Sign in to sync, and get Bitwarden extension working, enable TouchID.
 	- Firefox: Sign in to sync, and get Bitwarden extension working, enable TouchID.
 	- Raycast: Grant Accessibility, sign in, enable Cloud Sync, set the keyboard shortcut.
 	- Rectangle: Grant Accessibility, use Spectacle settings, add shortcuts for thirds/sixths.
-	- iTerm: Default Profile --> Window --> Transparency 15, Style 'Full-Width Top of Screen', Space 'All Spaces'; Terminal --> Scrollback lines '20,000'.
+	- iTerm: Default Profile → Window → Transparency 15, Style 'Full-Width Top of Screen', Space 'All Spaces'; Terminal → Scrollback lines '20,000'.
 	- Google Drive: Add my three accounts, Streaming mode, uncheck 'Prompt me to back up devices'. Create some convenience symlinks back into ~.
-	- Backblaze: Find the installer, install, grant Accessibility, go Settings --> 'Inherit Backup State' from the previous Mac.
+	- Backblaze: Find the installer, install, grant Accessibility, go Settings → 'Inherit Backup State' from the previous Mac.
 	- Once Documents have synced, go to the `scripts` folder and run `update-bin-symlinks`.
 	- For everything else, just open the app, sign in, grant Accessibility as needed.
 
