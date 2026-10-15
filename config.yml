@@ -22,12 +22,14 @@
 
 homebrew_installed_packages:
   - defaultbrowser
+  - fzf # fuzzy finder; required for zoxide's interactive zi command
   - git-gui
   - graphviz
   - mas # essential for this playbook to work
-  # - python # maybe just install this into the relevant virtual env ?
   - tree # nice little cli tool to show depth-indented listing of files
+  - uv
   - yt-dlp # needed for Raycast's youtube transcript extension to work
+  - zoxide # replacement for cd; provides z and zi
 
 homebrew_uninstalled_packages: []
 
