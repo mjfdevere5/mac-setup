@@ -107,6 +107,8 @@ _I recommend watching some of  Jeff's ["Ansible 101" series](https://www.youtube
 	- iTerm: Default Profile → Window → Transparency 15, Style 'Full-Width Top of Screen', Space 'All Spaces'; Terminal → Scrollback lines '20,000'.
 	- Google Drive: Add my three accounts, Streaming mode, uncheck 'Prompt me to back up devices'. Create some convenience symlinks back into ~.
 	- Backblaze: Find the installer, install, grant Accessibility, go Settings → 'Inherit Backup State' from the previous Mac.
+	- Claude Code: Install via curl (probably `curl -fsSL https://claude.ai/install.sh | bash`), as a brew installation would not stay up-to-date.
+	- iTerm AI: Download the package ([link](https://iterm2.com/ai-plugin.html)), unzip and add to /Applications.
 	- Once Documents have synced, go to the `scripts` folder and run `update-bin-symlinks`.
 	- For everything else, just open the app, sign in, grant Accessibility as needed.
 
