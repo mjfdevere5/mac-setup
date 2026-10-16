@@ -22,15 +22,16 @@
 
 homebrew_installed_packages:
   - defaultbrowser
-  - fzf # fuzzy finder; required for zoxide's interactive zi command
+  - fzf  # fuzzy finder; required for zoxide's interactive zi command
+  - git-delta
   - git-gui
   - graphviz
-  - mas # essential for this playbook to work
+  - mas  # essential for this playbook to work
   - tmux
-  - tree # nice little cli tool to show depth-indented listing of files
+  - tree  # nice little cli tool to show depth-indented listing of files
   - uv
-  - yt-dlp # needed for Raycast's youtube transcript extension to work
-  - zoxide # replacement for cd; provides z and zi
+  - yt-dlp  # needed for Raycast's youtube transcript extension to work
+  - zoxide  # replacement for cd; provides z and zi
 
 homebrew_uninstalled_packages: []
 
@@ -41,7 +42,7 @@ homebrew_taps: []
 homebrew_cask_apps:
   - alt-tab
   - anki
-  - backblaze # would like to replace this with a NAS, but i suppose it's good to have an off-site backup
+  - backblaze  # would like to replace this with a NAS, but i suppose it's good to have an off-site backup
   - chatgpt
   - claude
   # - crossover # Note that you should make sure to uninstall bottles if you are uninstalling this.
@@ -57,7 +58,7 @@ homebrew_cask_apps:
   - grandperspective
   - granola
   - iterm2
-  - logitech-camera-settings # so i can turn off autofocus. Note that this requires Rosetta (sudo softwareupdate --install-rosetta)
+  - logitech-camera-settings  # so i can turn off autofocus. Note that this requires Rosetta (sudo softwareupdate --install-rosetta)
   - loom
   - macdown
   # - malwarebytes
@@ -71,7 +72,7 @@ homebrew_cask_apps:
   - obsidian
   - onedrive
   - raycast
-  - rectangle # could use Raycast instead, maybe?
+  - rectangle  # could use Raycast instead, maybe?
   - signal
   - spotify
   - steam
@@ -86,8 +87,8 @@ homebrew_cask_apps:
   - whatsapp
   - wispr-flow
   - zoom
-# Quick Look plugins below this line
-# See https://github.com/sindresorhus/quick-look-plugins for more
+  # Quick Look plugins below this line
+  # See https://github.com/sindresorhus/quick-look-plugins for more
   - qlcolorcode
   - qlstephen
   - qlmarkdown
@@ -115,13 +116,12 @@ homebrew_cask_appdir: /Applications
 
 # homebrew_cask_accept_external_apps: false # Not sure what this does
 
-homebrew_use_brewfile: false # default is true
+homebrew_use_brewfile: false  # default is true
 # homebrew_brewfile_dir: '~'
 
 # homebrew_clear_cache: false # default is false
 
 # homebrew_folders_additional: [] # default is []
-
 
 
 ###############################################################################
@@ -132,7 +132,7 @@ configure_dotfiles: true
 dotfiles_repo: "git@github.com:mjfdevere5/dotfiles.git"
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: "~/Coding/dotfiles"
-dotfiles_repo_version: main # I use main, not master
+dotfiles_repo_version: main  # I use main, not master
 dotfiles_home: "~"
 dotfiles_files:
   - .gitignore
@@ -149,9 +149,9 @@ mas_email: ""
 mas_password: ""
 mas_uninstalled_apps: []
 mas_installed_apps:
-  - { id: 457622435, name: "Yoink" }
-  - { id: 1352778147, name: "Bitwarden" } # If installed via brew, then the browser extensions don't work correctly.
-  - { id: 6670778781, name: "Transcrybe - Live Translation" }
+  - {id: 457622435, name: "Yoink"}
+  - {id: 1352778147, name: "Bitwarden"}  # If installed via brew, then the browser extensions don't work correctly.
+  - {id: 6670778781, name: "Transcrybe - Live Translation"}
 # mas_upgrade_all_apps: false
 # mas_signin_dialog: false
 # mas_path: "{{ '/opt/homebrew/bin/mas' if ansible_architecture == 'arm64' else '/usr/local/bin/mas' }}"
@@ -258,34 +258,34 @@ configure_sublime: true
 sublime_base_path: "~/Library/Application Support/Sublime Text"
 sublime_config_path: "Packages/User"
 sublime_package_control:
-# Core essentials
+  # Core essentials
   - "Package Control"
   - "SideBarEnhancements"
   - "SublimeLinter"
   - "SublimeREPL"
-# General quality of life
+  # General quality of life
   - "TrailingSpaces"
-  - "BracketHighlighter" # not sure if working
+  - "BracketHighlighter"  # not sure if working
   - "WordingStatus"
-# Git, Github
-  - "GitGutter" # not sure if this is working?
-  - "GitSavvy" # not sure I'd ever use this
-  - "GitHub Flavored Markdown Preview" # default binding is ctrl+shift+g
-# Ansible and YAML
+  # Git, Github
+  - "GitGutter"  # not sure if this is working?
+  - "GitSavvy"  # not sure I'd ever use this
+  - "GitHub Flavored Markdown Preview"  # default binding is ctrl+shift+g
+  # Ansible and YAML
   - "AnsibleSnippets"
   - "SublimeLinter-contrib-yamllint"
-# Python and Jinja
+  # Python and Jinja
   - "Jinja2"
-# HTML, CSS, JavaScript, React, Redux, JSON
+  # HTML, CSS, JavaScript, React, Redux, JSON
   - "Babel"
   - "Emmet"
   - "HTML-CSS-JS Prettify"
   - "JavaScript Snippets"
   - "Pretty JSON"
   - "React ES6 Snippets"
-# Clojure
+  # Clojure
   - "Clojure Sublimed"
-# Themes
+  # Themes
   - "Theme - Cobalt2"
 
 
@@ -294,4 +294,3 @@ sublime_package_control:
 ###############################################################################
 
 post_provision_tasks: []
-
