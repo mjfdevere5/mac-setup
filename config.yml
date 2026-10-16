@@ -26,6 +26,7 @@ homebrew_installed_packages:
   - git-gui
   - graphviz
   - mas # essential for this playbook to work
+  - tmux
   - tree # nice little cli tool to show depth-indented listing of files
   - uv
   - yt-dlp # needed for Raycast's youtube transcript extension to work
@@ -43,6 +44,7 @@ homebrew_cask_apps:
   - backblaze # would like to replace this with a NAS, but i suppose it's good to have an off-site backup
   - chatgpt
   - claude
+  # - crossover # Note that you should make sure to uninstall bottles if you are uninstalling this.
   # - cursor # probably use VSCode instead.
   - deepl
   - discord
@@ -75,12 +77,12 @@ homebrew_cask_apps:
   - steam
   - sublime-text
   - superhuman
-  # - superwhisper
   - teamviewer
   - the-unarchiver
   - todoist
   - transmission
   - vlc
+  - visual-studio-code
   - whatsapp
   - wispr-flow
   - zoom
