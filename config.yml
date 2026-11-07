@@ -22,6 +22,7 @@
 
 homebrew_installed_packages:
   - defaultbrowser
+  - ffmpeg
   - fzf  # fuzzy finder; required for zoxide's interactive zi command
   - git-delta
   - git-gui
