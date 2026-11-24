@@ -21,6 +21,7 @@
 # homebrew_brew_bin_path: "{{ homebrew_prefix }}/bin"
 
 homebrew_installed_packages:
+  - atuin # shell history search; replaces ctrl-r
   - defaultbrowser
   - ffmpeg
   - fzf  # fuzzy finder; required for zoxide's interactive zi command
